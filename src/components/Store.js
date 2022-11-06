@@ -1,13 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function Store({ storeId, title, items, source }) {
-  function onClick() {
-  }
+export default function Store(props) {
+  let { store } = props;
+
   return (
-    <button className="listing" onClick={() => onClick()}>
-      <img src={source}></img>
-      <h1>{title}</h1>
-    </button>
+    <Link to={`/${store.routeName}`}>
+      <div className="listing">
+        <img src={store.source}></img>
+        <h1>{store.title}</h1>
+      </div>
+    </Link>
   );
 };
 

@@ -9,24 +9,25 @@ import RedShirtIcon from './images/red-shirt.png'
 const stores = [
   {
     storeId: 1,
-    title: "Clothes Store",
+    routeName: 'clothes',
+    title: 'Clothes Store',
     source: ClothingIcon,
     items: [
       {
         itemId: 1,
-        title: "Red Shirt",
+        title: 'Red Shirt',
         price: 30,
         source: RedShirtIcon
       },
       {
         itemId: 2,
-        title: "Blue Shirt",
+        title: 'Blue Shirt',
         price: 20,
         source: BlueShirtIcon
       },
       {
         itemId: 3,
-        title: "Black Shirt",
+        title: 'Black Shirt',
         price: 35,
         source: BlackShirtIcon
       }
@@ -34,18 +35,19 @@ const stores = [
   },
   {
     storeId: 2,
-    title: "Market",
+    routeName: 'market',
+    title: 'Market',
     source: FoodIcon,
     items: [
       {
         itemId: 1,
-        title: "Bottle of Water",
+        title: 'Bottle of Water',
         price: 2,
         source: WaterIcon
       },
       {
         itemId: 2,
-        title: "Gum",
+        title: 'Gum',
         price: 7,
         source: GumIcon
       }
@@ -57,4 +59,6 @@ export function getStores() {
   return stores;
 }
 
-//test
+export function getClothesStore() {
+  return stores.find(store => store.storeId === 1);
+}

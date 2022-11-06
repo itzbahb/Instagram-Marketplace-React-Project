@@ -1,13 +1,12 @@
 import Navbar from "./components/Navbar";
-import Center from "./components/Center";
 import { HomeScreen } from "./screens/home";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import ClothesScreen from "./screens/clothes";
 
-function NavBar() {
+function PageHeader() {
   return (
     <div className="container">
       <Navbar />
-      <Center />
       <Outlet />
     </div>
   );
@@ -17,8 +16,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<NavBar />}>
+        <Route path="/" element={<PageHeader />}>
           <Route index element={<HomeScreen />} />
+          <Route path="/clothes" element={<ClothesScreen />} />
         </Route>
       </Routes>
     </BrowserRouter>
