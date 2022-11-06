@@ -1,6 +1,10 @@
 import ClothingIcon from './images/clothing-store.png';
 import FoodIcon from './images/food-store.png'
-
+import WaterIcon from './images/water-bottle.png'
+import GumIcon from './images/gum.png'
+import BlackShirtIcon from './images/black-shirt.png'
+import BlueShirtIcon from './images/blue-shirt.png'
+import RedShirtIcon from './images/red-shirt.png'
 
 const stores = [
   {
@@ -12,19 +16,19 @@ const stores = [
         itemId: 1,
         title: "Red Shirt",
         price: 30,
-        source: "./images/red shirt.png"
+        source: RedShirtIcon
       },
       {
         itemId: 2,
         title: "Blue Shirt",
         price: 20,
-        source: "./images/blue shirt.png"
+        source: BlueShirtIcon
       },
       {
         itemId: 3,
         title: "Black Shirt",
         price: 35,
-        source: "./images/black shirt.png"
+        source: BlackShirtIcon
       }
     ]
   },
@@ -37,13 +41,13 @@ const stores = [
         itemId: 1,
         title: "Bottle of Water",
         price: 2,
-        source: "./images/water bottle.png"
+        source: WaterIcon
       },
       {
         itemId: 2,
         title: "Gum",
         price: 7,
-        source: "./images/gum.png"
+        source: GumIcon
       }
     ]
   }
