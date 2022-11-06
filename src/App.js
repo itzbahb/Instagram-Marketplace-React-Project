@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar";
+import Center from "./components/Center";
+import { HomeScreen } from "./screens/home";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 
-function App() {
+function NavBar() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Navbar />
+      <Center />
+      <Outlet />
     </div>
   );
 }
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<NavBar />}>
+          <Route index element={<HomeScreen />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 export default App;
