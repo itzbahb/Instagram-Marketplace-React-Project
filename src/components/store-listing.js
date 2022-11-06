@@ -3,7 +3,6 @@ import { getStore } from '../api';
 
 export default function StoreListing() {
   let params = useParams();
-  console.log(params)
   let storeId = params.storeId;
 
   let { items } = getStore(storeId);
