@@ -5,7 +5,7 @@ export default function Store(props) {
   let { store } = props;
 
   return (
-    <Link to={`/${store.routeName}`}>
+    <Link to={`/store/${store.storeId}`}>
       <div className="listing">
         <img src={store.source}></img>
         <h1>{store.title}</h1>

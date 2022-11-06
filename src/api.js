@@ -8,8 +8,7 @@ import RedShirtIcon from './images/red-shirt.png'
 
 const stores = [
   {
-    storeId: 1,
-    routeName: 'clothes',
+    storeId: '1',
     title: 'Clothes Store',
     source: ClothingIcon,
     items: [
@@ -34,8 +33,7 @@ const stores = [
     ]
   },
   {
-    storeId: 2,
-    routeName: 'market',
+    storeId: '2',
     title: 'Market',
     source: FoodIcon,
     items: [
@@ -59,6 +57,6 @@ export function getStores() {
   return stores;
 }
 
-export function getClothesStore() {
-  return stores.find(store => store.storeId === 1);
+export function getStore(storeId) {
+  return stores.find(store => store.storeId === storeId);
 }

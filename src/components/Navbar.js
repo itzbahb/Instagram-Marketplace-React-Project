@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <>
@@ -20,20 +22,16 @@ const Navbar = () => {
         </a>
 
         <ul className="nav-list" id="center">
-          <li className="nav-item">
-            <a href="BuyerPage.html" className="nav-link animation">
+          <Link to="/">
+            <li className="nav-item animation">
               Home
-            </a>
+            </li>
+          </Link>
+          <li className="nav-item animation">
+            Orders
           </li>
-          <li className="nav-item">
-            <a href="Seller.html" className="nav-link animation">
-              Orders
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="DriverPage.html" className="nav-link animation">
-              Account
-            </a>
+          <li className="nav-item animation">
+            Account
           </li>
         </ul>
 

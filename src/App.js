@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import { HomeScreen } from "./screens/home";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
-import ClothesScreen from "./screens/clothes";
+import StoreListing from "./components/store-listing";
 
 function PageHeader() {
   return (
@@ -18,7 +18,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<PageHeader />}>
           <Route index element={<HomeScreen />} />
-          <Route path="/clothes" element={<ClothesScreen />} />
+          <Route path="/store/:storeId" element={<StoreListing />} />
         </Route>
       </Routes>
     </BrowserRouter>
