@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Stores from "../components/Stores";
-import { getStores } from "../api";
+import { getStores } from "../api/Stores-Data";
 import Center from "../components/Center";
 
 export function HomeScreen() {
