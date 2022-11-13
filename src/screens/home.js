@@ -1,15 +1,16 @@
 import { useState } from "react";
 import Stores from "../components/Stores";
-import { getStores } from "../api/Stores-Data";
+import SellerList from "../components/SellerList";
+import { getSellers } from "../api/Users-Data";
 import Center from "../components/Center";
 
 export function HomeScreen() {
-  const [stores, setStores] = useState(getStores());
+  const [sellers, setSeller] = useState(getSellers());
 
   return (
     <>
       <Center />
-      <Stores stores={stores} />
+      <SellerList sellers={sellers} />
     </>
   );
 }

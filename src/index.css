@@ -66,7 +66,7 @@ li {
 }
 
 .top-nav {
-  background-image: url("./images/instagram-background.jpg");
+  background-image: url("./api/images/instagram-background.jpg");
   background-size: 100% 50rem;
   font-size: 2rem;
   color: white;
@@ -163,7 +163,7 @@ li {
 
 .listing {
   display: flex;
-  background-image: url("./images/instagram-background.jpg");
+  background-image: url("./api/images/instagram-background.jpg");
   background-size: 100% 100%;
   flex-direction: column;
   justify-self: center;

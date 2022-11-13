@@ -1,9 +1,20 @@
 export class User {
-  constructor(username, userId, type, orders) {
+  constructor(username, userId, type, pic, page) {
     this.username = username;
     this.userId = userId;
     this.type = type;
-    this.orders = orders;
+    this.pic = pic;
+    this.orders = [];
+    this.page = page;
+  }
+}
+
+export class Post {
+  constructor(title, postId, price, source) {
+    this.title = title;
+    this.price = price;
+    this.postId = postId;
+    this.source = source;
   }
 }
 

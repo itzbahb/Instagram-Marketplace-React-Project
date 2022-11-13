@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import { HomeScreen } from "./screens/home";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
-import StoreListing from "./components/store-listing";
+import SellerPage from "./components/SellerPage";
 
 function Root() {
   return (
@@ -18,7 +18,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Root />}>
           <Route index element={<HomeScreen />} />
-          <Route path="/store/:storeId" element={<StoreListing />} />
+          <Route path="/store/:storeId" element={<SellerPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
