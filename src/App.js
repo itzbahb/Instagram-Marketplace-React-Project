@@ -14,7 +14,7 @@ function Root() {
   }
 
   if (location.pathname === '/' && user.type === 'Seller') {
-    return <Navigate to='/' //fix this
+    return <Navigate to='/' />//fix this
   }
 
   return (
