@@ -1,10 +1,10 @@
 import React from 'react'
 import Seller from './Seller'
 
-export default function SellerList({ listOfSellers }) {
+export default function SellerList({ sellers }) {
   return (
     <div className='listings'>
-      {listOfSellers.map(seller => (
+      {sellers.map(seller => (
         <Seller
           key={seller.userId}
           seller={seller}

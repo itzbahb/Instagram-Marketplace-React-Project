@@ -22,9 +22,9 @@ const users = [
 ];
 
 export function getSellers() {
-  return users.filter((x) => x.type = "Seller");
+  return users.filter(user => user.type === "Seller");
 }
 
 export function getUser(userId) {
-  return users.find((x) => x.userId === userId);
+  return users.find(user => user.userId === userId);
 }

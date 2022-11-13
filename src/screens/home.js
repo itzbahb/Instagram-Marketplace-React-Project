@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Stores from "../components/Stores";
 import SellerList from "../components/SellerList";
 import { getSellers } from "../api/Users-Data";
 import Center from "../components/Center";
