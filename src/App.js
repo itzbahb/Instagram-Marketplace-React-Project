@@ -1,16 +1,20 @@
 import Navbar from "./components/Navbar";
 import { HomeScreen } from "./screens/home";
-import { BrowserRouter, Routes, Route, Outlet, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet, Navigate, useLocation } from "react-router-dom";
 import SellerPage from "./components/SellerPage";
 import LoginScreen from "./screens/login";
 import UserContextProvider, { useUserContext } from "./contexts/user";
 
 function Root() {
   let { user } = useUserContext();
-  console.log('Root', user)
+  let location = useLocation();
 
   if (!user) {
     return <Navigate to="/login" />;
+  }
+
+  if (location.pathname === '/' && user.type === 'Seller') {
+    return <Navigate to='/' //fix this
   }
 
   return (
