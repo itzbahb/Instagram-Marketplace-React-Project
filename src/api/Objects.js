@@ -1,6 +1,7 @@
 export class User {
-  constructor(username, userId, type, pic, page) {
+  constructor(username, password, userId, type, pic, page) {
     this.username = username;
+    this.password = password;
     this.userId = userId;
     this.type = type;
     this.pic = pic;

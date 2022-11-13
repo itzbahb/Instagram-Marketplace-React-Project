@@ -1,12 +1,24 @@
 import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
+import { getUsers } from "../api/Users-Data";
+import { useUserContext } from "../contexts/user";
 
 export default function LoginScreen(props) {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
+  const { user, setUser } = useUserContext();
+  const users = getUsers();
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(email, pass)
+    let validUser = users.find(user => user.username === email && user.password === pass );
+    if (validUser) {
+      setUser(validUser);
+    }
+  }
+
+  if (user) {
+    return <Navigate to="/" />
   }
 
   return (
