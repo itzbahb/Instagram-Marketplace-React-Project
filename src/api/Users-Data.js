@@ -8,17 +8,17 @@ import RedShirtIcon from "./images/red-shirt.png";
 import { User, Post } from "./Objects";
 
 const users = [
-  new User("Bob", "12345", "1", "Buyer", null, null),
-  new User("Clothes.lb", "12345", "2", "Seller", ClothingIcon, [
+  new User("Bob", "123", "1", "Buyer", null, null),
+  new User("Clothes.lb", "123", "2", "Seller", ClothingIcon, [
     new Post("Red Shirt", "1", 30, RedShirtIcon),
     new Post("Blue Shirt", "2", 20, BlueShirtIcon),
     new Post("Black Shirt", "3", 20, BlackShirtIcon)
   ]),
-  new User("Food.lb", "12345", "3", "Seller", FoodIcon, [
+  new User("Food.lb", "123", "3", "Seller", FoodIcon, [
     new Post("Bottle of Water", "1", 2, WaterIcon),
     new Post("Gum", "2", 4, GumIcon)
   ]),
-  new User("Joe", "12345", "4", "Driver", null, null)
+  new User("Joe", "123", "4", "Driver", null, null)
 ];
 
 export function getUsers() {

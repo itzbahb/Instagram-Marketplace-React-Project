@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 import { getUser } from "../api/Users-Data";
 
-export default function SellerPage() {
+export default function DriverPage() {
   let params = useParams();
-  let sellerId = params.sellerId;
+  let driverId = params.driverId;
 
-  let { username, page} = getUser(sellerId);
+  let { username, page} = getUser(driverId);
 
   return (
     <>

@@ -19,24 +19,6 @@ export class Post {
   }
 }
 
-export class Store {
-  constructor(title, storeId, source, items) {
-    this.title = title;
-    this.storeId = storeId;
-    this.source = source;
-    this.items = items;
-  }
-}
-
-export class Item {
-  constructor(title, itemId, source, price) {
-    this.title = title;
-    this.itemId = itemId;
-    this.source = source;
-    this.price = price;
-  }
-}
-
 export class Order{
   constructor(orderId, from, to, items){
     this.orderId = orderId
