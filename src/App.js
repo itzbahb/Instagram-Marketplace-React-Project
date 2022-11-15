@@ -17,6 +17,7 @@ function Root() {
     headers: {'Token': 'dsadadsadas'} //add your own headers
   });
 
+  //make sure that once a user is logged in, the token is updated for him, in addition to handeling incase an unauthorized reuqest is done to reidrect the user to the login page.
 
   if (!user) {
     return <Navigate to="/login" />;
