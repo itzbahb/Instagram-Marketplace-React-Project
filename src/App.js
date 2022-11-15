@@ -5,10 +5,18 @@ import SellerPage from "./components/SellerPage";
 import DriverPage from "./components/DriverPage";
 import LoginScreen from "./screens/login";
 import UserContextProvider, { useUserContext } from "./contexts/user";
+import axios from "axios";
 
 function Root() {
   let { user } = useUserContext();
   let location = useLocation();
+
+  axios.defaults({
+    baseURL: 'https://some-domain.com/api/', //use this as the url of the backend
+    timeout: 1000, 
+    headers: {'Token': 'dsadadsadas'} //add your own headers
+  });
+
 
   if (!user) {
     return <Navigate to="/login" />;

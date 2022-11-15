@@ -21,14 +21,42 @@ const users = [
   new User("Joe", "123", "4", "Driver", null, null, null, null)
 ];
 
-export function getUsers() {
-  return users;
+// export function getUsers() {
+//   return users;
+// }
+
+
+// export function getSellers() {
+//   return users.filter(user => user.type === "Seller");
+// }
+
+// export function getUser(userId) {
+//   return users.find(user => user.userId === userId);
+// }
+
+export async function getUsers() {
+  try {
+    const response = await axios.get('/users'); //add endpoint for all users
+     return response;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-export function getSellers() {
-  return users.filter(user => user.type === "Seller");
+export async function getSellers() {
+  try {
+    const response = await axios.get('/users'); //add endpoint for all sellers
+     return response;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-export function getUser(userId) {
-  return users.find(user => user.userId === userId);
+export async function getUser() {
+  try {
+    const response = await axios.get('/users'); //add endpoint for a specific user
+     return response;
+  } catch (error) {
+    console.error(error);
+  }
 }
