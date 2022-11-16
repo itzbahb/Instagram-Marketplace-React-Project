@@ -1,6 +1,7 @@
 export class User {
-  constructor(username, password, userId, type, pic, page, instaId, instaToken) {
+  constructor(username, email, password, userId, type, pic, page, instaId, instaToken, isAdmin) {
     this.username = username;
+    this.email = email
     this.password = password;
     this.userId = userId;
     this.type = type;
@@ -9,6 +10,7 @@ export class User {
     this.page = page;
     this.instaId = instaId;
     this.instaToken = instaToken;
+    this.isAdmin = isAdmin;
   }
 }
 
