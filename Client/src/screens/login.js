@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { getUsers } from "../api/Users-Data";
 import { useUserContext } from "../contexts/user";
 
-export default function LoginScreen(props) {
+export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
   const { user, setUser } = useUserContext();
@@ -21,9 +21,10 @@ export default function LoginScreen(props) {
     return <Navigate to="/" />
   }
 
+
   return (
     <div className="login-container">
-      <div className="auth-form-container">
+      <div className="login-auth-form-container">
         <form className="login-form" onSubmit={handleSubmit}>
           <label htmlFor="email">Username or Email</label>
           <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Username or Email" id="email" name="email" />
@@ -31,7 +32,7 @@ export default function LoginScreen(props) {
           <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="Password" id="password" name="password" />
           <button type="submit">Login</button>
         </form>
-        <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>
+        <Link to="/register"><button className="link-btn">Don't have an account? Register here.</button></Link>
       </div>
     </div>
   )
